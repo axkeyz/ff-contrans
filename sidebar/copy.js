@@ -17,7 +17,7 @@ function onCaptured(tabInfo) {
 
 function onExecuted(result) {
   document.getElementById("paste").disabled = false;
-  document.getElementById("message").innerText = JSON.stringify(result[0].summary)
+  document.getElementById("message").innerText = JSON.stringify(result[0])
 }
 
 function onError(error) {

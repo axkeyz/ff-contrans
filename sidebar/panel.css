@@ -9,7 +9,6 @@ body {
   height: 90%;
   font: caption;
   background-color: #F4F7F8;
-  padding: 1em 2em;
   font-size: 1.2em;
 }
 
@@ -33,6 +32,14 @@ button:disabled {
   width: 100%;
 }
 
+.tab {
+  padding: 1em 2em;
+}
+
+#intro {
+  padding: 1em 2em 0 2em
+}
+
 select#transfer {
   padding: 0.75rem 1rem;
   text-align: center;
@@ -51,4 +58,26 @@ select#transfer {
 .blue-button {
   background-color: rgb(240 249 255);
   border-color: rgb(14 165 233);
+}
+
+.gray-button {
+  background-color: rgb(241 245 249);
+  border-color: rgb(100 116 139);
+}
+
+#message {
+  border-style: dashed;
+  border-color: rgb(124 58 237);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  min-height: 10rem;
+  max-height: 10rem;
+  overflow: scroll;
+}
+
+.change-tab-wrap {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+  right: 2rem;
 }
