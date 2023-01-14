@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="panel.css"/>
+  </head>
+
+<body>
+  <p id="intro">This extension transfers content from one site to another via a template.</p>
+
+  <div class="mb-5">
+    <label for="transfer">Select sites to be transferred</label>
+    <select class="w-full" id="transfer">
+      <option selected="true" disabled="disabled">Please select (FROM->TO)</option> 
+    </select>
+  </div>
+
+  <div class="mb-5">
+    <button class="w-full blue-button" id="copy" disabled>Copy Info</button>
+  </div>
+
+  <div class="mb-5">
+    <button class="w-full green-button" id="paste" disabled>Paste Info</button>
+  </div>
+
+  <div id="message"></div>
+  <script src="panel.js" defer></script>
+  <script src="copy.js" defer></script>
+  <script src="paste.js" defer></script>
+</body>
+
+</html>

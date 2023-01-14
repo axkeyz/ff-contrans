@@ -1,0 +1,54 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 90%;
+  font: caption;
+  background-color: #F4F7F8;
+  padding: 1em 2em;
+  font-size: 1.2em;
+}
+
+button {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border-style: solid;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: auto;
+}
+
+.mb-5 {
+  margin-bottom: 1.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+select#transfer {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: rgb(249 168 212);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.green-button {
+  background-color: rgb(247 254 231);
+  border-color: rgb(101 163 13);
+}
+
+.blue-button {
+  background-color: rgb(240 249 255);
+  border-color: rgb(14 165 233);
+}

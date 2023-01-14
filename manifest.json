@@ -1,0 +1,28 @@
+{
+
+  "manifest_version": 2,
+  "name": "Contrans",
+  "description": "Transfers content from one site to another site for Edit CMS.",
+  "version": "1.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "54.0a1"
+    }
+  },
+
+  "sidebar_action": {
+    "default_icon": "icons/star.png",
+    "default_title" : "Contrans",
+    "default_panel": "sidebar/panel.html"
+  },
+
+  "permissions": ["*://*.com/", "storage", "tabs", "activeTab"],
+
+  "commands": {
+    "_execute_sidebar_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      }
+    }
+  }
+}
