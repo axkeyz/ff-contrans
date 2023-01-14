@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Contrans",
-  "description": "Transfers content from one site to another site for Edit CMS.",
+  "description": "Transfers content from one site to another site.",
   "version": "1.0",
   "browser_specific_settings": {
     "gecko": {
