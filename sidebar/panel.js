@@ -1,12 +1,3 @@
-select = document.getElementById("transfer"); 
-options = [
-    // add options
-]
-
-for(i in options){
-    select.add(new Option(options[i].toUpperCase().replace("-", " -> "), options[i]), undefined)
-}
-
 tabButton = document.getElementById("change-tab")
 tabButton.addEventListener("click", changeTab)
 function changeTab() {
