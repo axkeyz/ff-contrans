@@ -50,6 +50,20 @@ select#transfer {
   cursor: pointer;
 }
 
+input[type="file"] {
+  display: none;
+}
+
+.file-upload {
+  padding: 2rem 1rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.5rem;
+  border-style: solid;
+  cursor: pointer;
+}
+
 .green-button {
   background-color: rgb(247 254 231);
   border-color: rgb(101 163 13);

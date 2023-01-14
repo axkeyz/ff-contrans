@@ -28,17 +28,16 @@
     <div id="message" class="mb-5"></div>
   </div>
   <div class="tab" style="display:none">
-    <div class="mb-5">
-      <p>Switch tab to the source site and click to copy info</p>
-      <button class="w-full blue-button" id="copy">Copy Info</button>
+    <div class="mb-10">
+      <p>Upload the javascript file that copies data in the source site</p>
+      <label for="copyjsfile" class="file-upload blue-button">Copy.js</label>
+      <input type="file" id="copyjsfile">
     </div>
-
     <div class="mb-5">
-      <p>Switch tab to destination and click below</p>
-      <button class="w-full green-button" id="paste" disabled>Paste Info</button>
+      <p>Upload the javascript file that pastes data in the destination site</p>
+      <label for="pastejsfile" class="file-upload green-button">Paste.js</label>
+      <input type="file" id="pastejsfile">
     </div>
-
-    <div id="message" class="mb-5"></div>
   </div>
 
   <div class="mb-5 change-tab-wrap">
