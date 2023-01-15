@@ -20,16 +20,18 @@
 
     <div id="message" class="mb-5"></div>
   </div>
-  <div class="tab" style="display:none">
+  <div class="tab mt--5" style="display:none">
     <div class="mb-10">
-      <p>Upload the javascript file that copies data in the source site</p>
-      <label for="copyjsfile" class="file-upload blue-button">Copy.js</label>
-      <input type="file" id="copyjsfile">
+      <p>Upload copy.js (gets data from source site)</p>
+      <div class="area blue-button">
+        <input type="file" id="copy-js" />
     </div>
-    <div class="mb-5">
-      <p>Upload the javascript file that pastes data in the destination site</p>
-      <label for="pastejsfile" class="file-upload green-button">Paste.js</label>
-      <input type="file" id="pastejsfile">
+    </div>
+    <div class="mb-10">
+      <p>Upload paste.js (dumps data into destination site)</p>
+      <div class="area green-button">
+        <input type="file" id="paste-js" />
+    </div>
     </div>
   </div>
 

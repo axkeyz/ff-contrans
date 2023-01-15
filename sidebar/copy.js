@@ -6,10 +6,10 @@ function captureWebsiteData() {
 
 function onCaptured(tabInfo) {
   srcData = tabInfo[0]
-  injector = document.getElementById("transfer").value
+  injector = uploaded[copyIndex]
 
   executing = browser.tabs.executeScript(srcData.id, {
-    file: "../copy/"+injector+".js"
+    code: injector
   })
 
   executing.then(onExecuted, onError);
@@ -17,9 +17,9 @@ function onCaptured(tabInfo) {
 
 function onExecuted(result) {
   document.getElementById("paste").disabled = false;
-  document.getElementById("message").innerText = JSON.stringify(result[0])
+  document.getElementById("message").innerText = "Result: " + JSON.stringify(result[0])
 }
 
 function onError(error) {
-  document.getElementById("message").innerText = error
+  document.getElementById("message").innerText = error + "\n\n" + injector
 }
