@@ -48,12 +48,12 @@ function onFile(upload, index) {
     }
 }
 
-copyjs.addEventListener('dragenter', function (e) {upload.parentNode.className = 'area dragging'})
-copyjs.addEventListener('dragleave', function (e) {upload.parentNode.className = 'area'})
+copyjs.addEventListener('dragenter', function (e) {copyjs.parentNode.className = 'area dragging'})
+copyjs.addEventListener('dragleave', function (e) {copyjs.parentNode.className = 'area'})
 copyjs.addEventListener('dragdrop', function (e) {onFile(copyjs, copyIndex)})
 copyjs.addEventListener('change', function (e) {onFile(copyjs, copyIndex)})
 
-pastejs.addEventListener('dragenter', function (e) {upload.parentNode.className = 'area dragging'})
-pastejs.addEventListener('dragleave', function (e) {upload.parentNode.className = 'area'})
+pastejs.addEventListener('dragenter', function (e) {pastejs.parentNode.className = 'area dragging'})
+pastejs.addEventListener('dragleave', function (e) {pastejs.parentNode.className = 'area'})
 pastejs.addEventListener('dragdrop', function (e) {onFile(pastejs, pasteIndex)})
 pastejs.addEventListener('change', function (e) {onFile(pastejs, pasteIndex)})
