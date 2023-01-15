@@ -9,7 +9,7 @@
 <body>
   <p id="intro">This extension transfers content from one site to another via a template.</p>
 
-  <div class="tab">
+  <div class="tab" style="display:none">
     <div class="mb-5">
       <button class="w-full blue-button" id="copy">Copy Info</button>
     </div>
@@ -20,7 +20,7 @@
 
     <div id="message" class="mb-5"></div>
   </div>
-  <div class="tab mt--5" style="display:none">
+  <div class="tab mt--5">
     <div class="mb-10">
       <p>Upload copy.js (gets data from source site)</p>
       <div class="area blue-button">
@@ -36,12 +36,11 @@
   </div>
 
   <div class="mb-5 change-tab-wrap">
-    <button id="change-tab" class="w-full gray-button">Upload JS templates</button>
+    <button id="change-tab" class="w-full gray-button">Transfer data</button>
   </div>
 
   <script src="panel.js" defer></script>
   <script src="copy.js" defer></script>
-  <script src="paste.js" defer></script>
 </body>
 
 </html>

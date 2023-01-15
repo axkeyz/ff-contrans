@@ -1,12 +1,15 @@
-document.getElementById("copy").addEventListener("click", captureWebsiteData)
+var result
 
-function captureWebsiteData() {
-  browser.tabs.query({active: true}).then(onCaptured, onError)
+document.getElementById("copy").addEventListener("click", function (e) {captureWebsiteData(copyIndex)})
+document.getElementById("paste").addEventListener("click", function (e) {captureWebsiteData(pasteIndex)})
+
+function captureWebsiteData(index) {
+  browser.tabs.query({active: true}).then(function (e) {onCaptured(e, index)}, onError)
 }
 
-function onCaptured(tabInfo) {
+function onCaptured(tabInfo, index) {
   srcData = tabInfo[0]
-  injector = uploaded[copyIndex]
+  injector = uploaded[index]
 
   executing = browser.tabs.executeScript(srcData.id, {
     code: injector
@@ -16,10 +19,17 @@ function onCaptured(tabInfo) {
 }
 
 function onExecuted(result) {
-  document.getElementById("paste").disabled = false;
-  document.getElementById("message").innerText = "Result: " + JSON.stringify(result[0])
+  if (document.getElementById("paste").disabled){
+    document.getElementById("paste").disabled = false;
+  }
+
+  try {
+    document.getElementById("message").innerText = result[0]["message"]
+  } catch(error) {
+    onError(error)
+  }
 }
 
 function onError(error) {
-  document.getElementById("message").innerText = error + "\n\n" + injector
+  document.getElementById("message").innerText = error
 }
