@@ -1,5 +1,3 @@
-var result
-
 document.getElementById("copy").addEventListener("click", function (e) {captureWebsiteData(copyIndex)})
 document.getElementById("paste").addEventListener("click", function (e) {captureWebsiteData(pasteIndex)})
 
@@ -18,13 +16,14 @@ function onCaptured(tabInfo, index) {
   executing.then(onExecuted, onError);
 }
 
-function onExecuted(result) {
+function onExecuted(results) {
   if (document.getElementById("paste").disabled){
     document.getElementById("paste").disabled = false;
   }
 
   try {
-    document.getElementById("message").innerText = result[0]["message"]
+    document.getElementById("message").innerText = results[0]["message"]
+    browser.storage.sync.set({"results": results[0]});
   } catch(error) {
     onError(error)
   }
