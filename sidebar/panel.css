@@ -49,9 +49,17 @@ button:disabled {
   border-color: rgb(101 163 13);
 }
 
+button.green-button:hover:enabled {
+  border-color: rgb(77 124 15);
+}
+
 .blue-button {
   background-color: rgb(240 249 255);
   border-color: rgb(14 165 233);
+}
+
+button.blue-button:hover {
+  border-color: rgb(3 105 161);
 }
 
 .gray-button {
@@ -59,13 +67,16 @@ button:disabled {
   border-color: rgb(100 116 139);
 }
 
+button.gray-button:hover {
+  border-color: rgb(51 65 85);
+}
+
 #message {
   border-style: dashed;
   border-color: rgb(124 58 237);
-  border-radius: 0.5rem;
   padding: 0.75rem 1rem;
-  min-height: 10rem;
-  max-height: 10rem;
+  min-height: 15rem;
+  max-height: 15rem;
   overflow: scroll;
 }
 
